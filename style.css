@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Luckiest+Guy&family=MuseoModerno:wght@600&family=Volkhov&display=swap');
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(assests/front.jpg);
+    background-position: center;
+}
+nav,.link-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav
+{
+    min-height: 6vh;
+    padding: 0px 50px;
+}
+
+.link-container li h3
+{
+    text-decoration: none;
+    font-size:1.5em;
+    color: red;
+}
+
+#logo
+{
+    color: #f05136;
+    font-size: 2em;
+}
+.link-container
+{
+    width: 30%;
+    list-style: none;
+}
+
+.fa-volume-mute,.fa-volume-up
+{
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#header{
+    min-height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 15px;
+}
+#mid-section
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+img
+{
+    width: 260px;
+    height: 410px;
+    box-shadow: 0 8px 16px 0 rgba(241, 235, 235, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    margin: 20px 0px;
+    border-radius: 20px; 
+    transition: all ease-in 1s ;
+}
+.imgstyle
+{
+    transform: rotateY(360deg);
+}
+.container
+{
+    width: 100%;
+}
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.player-card>h1,.computer-card>h1
+{
+    font-size: 2em;
+    color: white;
+}
+#player-name ,#computer-name
+{
+    font-family: 'MuseoModerno', cursive;
+    font-size: 2em;
+}
+.chips{
+    display: flex;
+    margin-left: 80px;
+}
+.score-board{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.score-board>div{
+
+    margin-top: 160px;
+    padding: 50px;
+    width: 100%;
+    border: 2px solid white;
+}
+.score-board>div>h3{
+    margin-top: 30px;
+    color: green;
+}
+.totalchips
+{
+    display: flex;
+    margin-left: 130px;
+    margin-top: 20px;
+    color: #15f4ee;
+}
+.score-board>div>h2{
+    color: white;
+}
+.score-board>div>h2,h3{
+    font-size: 2em;
+}
+
+
+#show-call
+{
+    color: darkturquoise;
+    font-size: 1.8em;
+    font-family: 'Volkhov', serif;
+}
+#winner
+{
+    color:#08ff08;
+    font-size:2em;
+    font-family: 'MuseoModerno', cursive;
+    transition: 2s ease all;
+}
+.winnertransfrom
+{
+    transform: scale(0.1);
+    transform: scale(1);
+}
+
+
+.btn-container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+#player-chips,#computer-chips
+{
+    color: #15f4ee;
+    font-weight: 700;
+}
+button{
+    font-style: none;
+    margin-top: 20px;
+    font-size: 1.5em;
+    padding: 5px;
+    width: 200px;
+    border-radius: 40px;
+    border:2px solid red;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Lobster', cursive;
+    
+}
+button:hover
+{
+    background-color: black;
+    color: white;
+}
+button:disabled
+{
+    background-color: rgb(206, 55, 55);
+    cursor: no-drop;
+    color: black;
+}
+
+#popup{
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    border: 2px solid purple;
+    padding: 60px;
+    z-index:7;
+    background-color: black;
+    box-shadow: 0 8px 16px 0 rgba(241, 235, 235, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+@keyframes popupanimation{
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
+#popup>h1
+{
+    padding: 30px;
+    font-size:3em;
+    color: white;
+    text-align: center;
+}
+#popup>h3
+{
+    padding: 100px;
+    color: white;
+    text-align: center;
+}
+#restart,#cancel
+{
+    margin-left: 280px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+}
+
+#popup>button:hover
+{
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  color: #fff;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  min-width: 400px;
+  min-height: 200px;
+  background-color: black;
+}
+span>h3
+{
+   padding-top: 10px;
+   font-size: 1.5em;
+   color:darkgreen ;
+
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+span>img
+{
+    width: 80px;
+    height: 90px;
+    border: none;
+    border-radius: 0;
+    padding-left: 1px;
+    margin-bottom: 0;
+}
+
+
+

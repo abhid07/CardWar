@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card War</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div id="logo">Card War</div>
+        <ul class="link-container">
+            <div class="tooltip"><li><h3 id="instruction">Instructions</h3></li>
+                <span class="tooltiptext">
+                    <h1>Priority of cards from higher to lower :</h1>
+                    <img src="assests/14.jpg"><img src="assests/13.jpg" ><img src="assests/12.jpg" ><img src="assests/11.jpg" ><img src="assests/10.jpg" ><img src="assests/9.jpg" >
+                    <img src="assests/8.jpg"><img src="assests/7.jpg"><img src="assests/6.jpg"><img src="assests/5.jpg"><img src="assests/4.jpg"><img src="assests/3.jpg"><img src="assests/2.jpg">
+                   <h3> 1. Click on 'View Card' button to see your card<br></h3>
+                    <h3>2. Click on 'Bet Button' to bet your chips<br></h3>
+                    <h3>3. 3 bets are compulsory to do<br></h3>
+                    <h3>4. After 3 bets you can click on 'Show' button to see the result or you can continue your bet<br></h3>
+                    <h3>5. The player who has higher priority card will win and get all the betted chips<br></h3>
+                    <h3>6. Process will continue until one of the player loses his all chips<br></h3>
+                </span>
+            </div>
+            <li><i id="mute" class='fas fa-volume-mute' style='font-size:20px;color:red' onclick="soundMute()"></i></li>
+            <li><i id="unmute" class='fas fa-volume-up' style='font-size:20px;color:red' onclick="soundUnmute()"></i></li>
+        </ul>
+    </nav>
+    <section id="header">
+        <h1>Card War</h1>
+    </section>
+    <section id="mid-section">
+        <div class="container">
+            <div class="card-container">
+                <div class="player-card">
+                    <h1 id="player-name">Player</h1>
+                    <img src="assests/fold.jpg" alt="" srcset="" id="playerImg">
+                    <div class="chips">
+                        <i class='fas fa-rupee-sign' style='font-size:30px;color:green'>&nbsp; : </i>
+                        <h3 id="player-chips">&nbsp; 200 </h3>
+                    </div>
+                </div>
+
+                <div class="score-board">
+                    <div>
+                        <h2>Total chips</h3>
+                            <div class="totalchips">
+                                <i class='fas fa-rupee-sign' style='font-size:30px;color:green'>&nbsp; : </i>
+                                <h3 id="total-chips"> &nbsp;00 </h3>
+                            </div>
+                            <h3 id="show-call"></h3>
+
+                            <h3 id="winner"></h3>
+                            
+                    </div>
+                </div>
+                <div class="computer-card">
+                    <h1 id="computer-name">Computer</h1>
+                    <img src="assests/fold.jpg" alt="" srcset="" id="compImg">
+                    <div class="chips">
+                        <i class='fas fa-rupee-sign' style='font-size:30px;color:green'>&nbsp; : </i>
+                        <h3 id="computer-chips">&nbsp; 200 </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button id="view-btn" onclick="displayPlayerImg()">View Card</button>
+                <button id="bet-btn" onclick="betting()" disabled>Bet</button>
+                <button id="show-btn" onclick="showResult()" disabled>Show</button>
+                <button id="nextround-btn" onclick="nextRound()" disabled>Next Round</button>
+            </div>
+        </div>
+
+    </section>
+            <div id="popup">
+                <h1 id="popupwinner">Player 1 Winner </h1>
+                <hr>
+                <h3>Do You Want To Restart The Game?</h3>
+                <button id="restart" onclick="window.location.reload();">Yes</button>
+                <button id="cancel" onclick="location.href='index.html';">No</button>
+            </div>
+            
+
+           
+
+            <audio id="chips" src="assests/chips.wav"></audio>
+            <audio id="shuffle" src="assests/shuffle.mp3"></audio>
+            <audio id="cardflip" src="assests/cardflip.mp3"></audio>
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
